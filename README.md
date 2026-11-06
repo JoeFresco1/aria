@@ -34,6 +34,21 @@ aria/
 
 ### 1. Data Preparation
 
+For an approved SQLite source, start with metadata inspection:
+
+```sh
+python scripts/onboard_sqlite.py path/to/subscriptions.sqlite subscriptions workspace.json
+```
+
+The command creates a new portable workspace JSON with a logical source ID,
+connection guidance, and a dated inventory of declared tables, columns and keys.
+It lists views and virtual/shadow tables by name and type. Application rows and
+the local database path stay out of the record. Review join cardinality, business
+definitions, and permitted uses with the source owner before planning a study.
+For a refresh, write a new file, review the difference and increment the source
+record version when adopting a change. Protect the file using OS permissions
+for every account or tool that can open it. Read-only mode applies to this inspector.
+
 - Place raw data in the `data/raw/` folder
 - Manually create `docs/01-basic-information.md` to describe project background, objectives, and data overview
 

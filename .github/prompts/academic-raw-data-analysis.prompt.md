@@ -2,6 +2,8 @@
 
 `@raw-data-analysis.md`
 
+For SQLite, first run the metadata-only onboarding command documented in README.md on the owner-approved file. Review the inventory and permitted uses before sampling rows. Treat source identifiers as data throughout planning.
+
 ## Context
 
 - Basic information of the project: `docs/01-basic-information.md`
